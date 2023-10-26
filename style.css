@@ -1,0 +1,46 @@
+/* Estilizando o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Estilizando o cabeçalho */
+h1 {
+    color: #333;
+}
+
+/* Estilizando os elementos do formulário */
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input {
+    width: 100px;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #0074cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+/* Estilizando o resultado */
+p {
+    font-weight: bold;
+    color: #0074cc;
+}
+
+/* Estilizando o resultado calculado */
+#resultado {
+    font-size: 24px;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colisão Inelástica</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+    <h1>Colisão Inelástica</h1>
+    <p>Este é um exemplo de cálculo de colisão inelástica em JavaScript.</p>
+
+    <label for="massaObjeto1">Massa do Objeto 1 (kg):</label>
+    <input type="number" id="massaObjeto1" value="2"><br>
+
+    <label for="massaObjeto2">Massa do Objeto 2 (kg):</label>
+    <input type="number" id="massaObjeto2" value="3"><br>
+
+    <label for="velocidadeObjeto1">Velocidade do Objeto 1 (m/s):</label>
+    <input type="number" id="velocidadeObjeto1" value="4"><br>
+
+    <label for="velocidadeObjeto2">Velocidade do Objeto 2 (m/s):</label>
+    <input type="number" id="velocidadeObjeto2" value="2"><br>
+
+    <button onclick="calcularColisaoInelastica()">Calcular</button>
+
+    <p>Velocidade final após a colisão inelástica: <span id="resultado"></span> m/s</p>
+
+    <script>
+        function calcularColisaoInelastica() {
+            const massaObjeto1 = parseFloat(document.getElementById("massaObjeto1").value);
+            const massaObjeto2 = parseFloat(document.getElementById("massaObjeto2").value);
+            const velocidadeObjeto1 = parseFloat(document.getElementById("velocidadeObjeto1").value);
+            const velocidadeObjeto2 = parseFloat(document.getElementById("velocidadeObjeto2").value);
+
+            const momentoInicialObjeto1 = massaObjeto1 * velocidadeObjeto1;
+            const momentoInicialObjeto2 = massaObjeto2 * velocidadeObjeto2;
+            const momentoTotalInicial = momentoInicialObjeto1 + momentoInicialObjeto2;
+            const massaTotal = massaObjeto1 + massaObjeto2;
+            const velocidadeFinal = momentoTotalInicial / massaTotal;
+
+            document.getElementById("resultado").textContent = velocidadeFinal.toFixed(2) + " m/s";
+        }
+    </script>
+</body>
+</html>
+    
+</body>
+</html>
